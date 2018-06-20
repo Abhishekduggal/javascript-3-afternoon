@@ -6,10 +6,10 @@
   You can refresh the page at any time to re-run all the tests.
 */
 
-/*
-  First we'll look at the difference between accessing property values in a for in loop and accessing the property name in a for in loop.
-  In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
-*/
+// /*
+//   First we'll look at the difference between accessing property values in a for in loop and accessing the property name in a for in loop.
+//   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
+// */
 
 // var values = {
 //   one: 'These',
@@ -23,9 +23,9 @@
 //   console.log(values[key])
 // }
 
-/*
-  In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
-*/
+// /*
+//   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
+// */
 
 // for(var key in values) {
 //   console.log(key)
@@ -41,6 +41,12 @@
 
 function showValues( obj ) {
   //Code Here
+  var str = '';
+
+  for(var prop in obj){
+    str = str + obj[prop]; 
+  }
+  return str;
 }
 
 
@@ -54,7 +60,14 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function greaterThan10(obj){
+  for (var prop in obj){
+    if(obj[prop] > 10){
+      obj[prop] = 0;
+    }
+  }
+  return obj;
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +79,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double(obj){
+  for (var prop in obj){
+      obj[prop] *= 2;
+    }
+  return obj;
+}
 
 
 ////////// PROBLEM 4 //////////
