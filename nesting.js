@@ -52,7 +52,21 @@ var employees = [
 
 //Code Here
 
-
+function employeeUpdater() {
+    // employees.forEach(function(emp) {
+    //   console.log(emp);
+    // });
+  var remove = employees.filter(function(employee){
+    console.log(employee.firstName);
+    
+    if(employee.firstName === 'Lorie'){
+      employee.department = 'HR';
+    }
+    return employee.firstName !== 'Theo';
+    //console.log(employee);
+  });
+  return remove;
+}
 
 ////////// PROBLEM 2 //////////
 
@@ -70,7 +84,23 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
+function removeDuplicates(dupArr){
+  //var arr = [];
+  //var dupArr = workplaceAccidents;
 
+  for(let i = 0; i < dupArr.length; i++){
+    //console.log(dupArr[i]);
+    for(let j = dupArr.length -1; j > i; j--){
+      //console.log(dupArr[j]);
+      if(dupArr[i] === dupArr[j]){
+        dupArr.splice(j,1);
+      }
+      
+    }
+  };
+  return dupArr;
+}
+removeDuplicates(workplaceAccidents);
 
 ////////// PROBLEM 3 //////////
 
