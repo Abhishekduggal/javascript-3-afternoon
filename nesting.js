@@ -102,6 +102,22 @@ function removeDuplicates(dupArr){
 }
 removeDuplicates(workplaceAccidents);
 
+
+
+// function removeDuplicates (arr){
+//   var empArr = [];
+//   for(var i = 0; i<arr.length; i++){
+//     if(empArr.indexOf(arr[i]) === -1){
+//       empArr.push(arr[i]);
+//     }
+//   }
+//   return empArr;
+// }
+
+//nodups([1,2,3,2,1]);
+
+
+
 ////////// PROBLEM 3 //////////
 
 // Do not edit the code below.

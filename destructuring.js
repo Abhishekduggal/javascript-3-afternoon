@@ -99,7 +99,10 @@ function ingredients(obj){
 
 //Code Here
 
-
+function largeNumbers ({first, second, third}) {
+  //console.log(first);
+  return Math.min(first,second,third);
+};
 
 ////////// PROBLEM 6 //////////
 
@@ -110,5 +113,13 @@ function ingredients(obj){
 */
 
 //Code Here
-
+function numberGroups({a,b,c}){
+  if(a.length > b.length && a.length > c.length){
+    return a;
+  }else if(b.length > a.length && b.length > c.length){
+    return b;
+  }else if(c.length > b.length && c.length > b.length){
+    return c;
+  }
+}
 
